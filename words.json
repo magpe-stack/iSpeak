@@ -1,0 +1,12 @@
+[
+  { "english": "apple", "portuguese": "maçã" },
+  { "english": "book", "portuguese": "livro" },
+  { "english": "water", "portuguese": "água" },
+  { "english": "house", "portuguese": "casa" },
+  { "english": "sun", "portuguese": "sol" },
+  { "english": "moon", "portuguese": "lua" },
+  { "english": "time", "portuguese": "tempo" },
+  { "english": "friend", "portuguese": "amigo" },
+  { "english": "work", "portuguese": "trabalho" },
+  { "english": "world", "portuguese": "mundo" }
+]
