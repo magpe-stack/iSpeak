@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iSpeak</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="logo.svg" alt="iSpeak Logo" class="logo-icon">
+      <h1 class="brand-title">iSpeak</h1>
+    </div>
+    <button id="theme-toggle" class="btn-icon" aria-label="Alternar Tema" title="Alternar Tema">
+      <svg id="theme-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+        <!-- Ícone preenchido via JS -->
+      </svg>
+    </button>
+  </header>
+
+  <main class="container">
+    <!-- Barra de Busca e Filtros -->
+    <div class="search-bar">
+      <div class="input-wrapper">
+        <input type="text" id="search-input" placeholder="Buscar palavra...">
+        <button id="btn-clear-search" class="btn-clear-input" title="Limpar busca" aria-label="Limpar busca">×</button>
+      </div>
+      <button id="btn-favorites-filter" class="btn-icon" title="Filtrar Favoritas" aria-label="Favoritas">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Cartão Principal da Palavra -->
+    <div class="word-card">
+      <button id="btn-favorite" class="btn-favorite" title="Favoritar" aria-label="Favoritar">
+        <svg id="fav-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </button>
+      <div class="word-content">
+        <h2 id="word-en">Carregando...</h2>
+        <p id="word-pt"></p>
+      </div>
+      <div class="word-counter" id="word-counter">0 / 0</div>
+    </div>
+
+    <!-- Painel de Resultados da Busca -->
+    <div id="search-results" class="search-results hidden"></div>
+  </main>
+
+  <!-- Rodapé com Botões de Ação Baseados em Ícones -->
+  <footer class="action-footer">
+    <button id="btn-export" class="btn-icon btn-action" title="Exportar Palavra" aria-label="Exportar">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </button>
+
+    <!-- Botão Copiar Principal (Mão Aberta) -->
+    <button id="btn-copy" class="btn-copy-main" title="Copiar Palavra e Significado" aria-label="Copiar">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v6"/>
+        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/>
+        <path d="M18 8a2 2 0 0 1 2 2v4a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+      </svg>
+    </button>
+
+    <!-- Botão Próximo (Mão Apontando/Deslizante) -->
+    <button id="btn-next" class="btn-icon btn-action" title="Próxima Palavra Aleatória" aria-label="Próxima">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+      </svg>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
