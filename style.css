@@ -248,3 +248,9 @@ body {
   background-color: var(--hover-color);
   border-color: var(--text-color);
 }
+
+/* Efeito de deslizamento visual ao clicar no botão Próximo */
+#btn-next:active svg {
+  transform: translateX(3px) translateY(-2px);
+  transition: transform 0.1s ease;
+}
